@@ -13,5 +13,10 @@ goog.addDependency("../cljs/reader.js", ['cljs.reader'], ['goog.string', 'cljs.c
 goog.addDependency("../clojure/walk.js", ['clojure.walk'], ['cljs.core']);
 goog.addDependency("../chord/format.js", ['chord.format'], ['cljs.core', 'cljs.core.async', 'cljs.reader', 'clojure.walk']);
 goog.addDependency("../chord/client.js", ['chord.client'], ['cljs.core', 'cljs.core.async', 'chord.channels', 'chord.format']);
+goog.addDependency("../clojure/set.js", ['clojure.set'], ['cljs.core']);
+goog.addDependency("../clojure/string.js", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);
+goog.addDependency("../sablono/util.js", ['sablono.util'], ['goog.Uri', 'cljs.core', 'clojure.set', 'clojure.string', 'clojure.walk']);
+goog.addDependency("../sablono/interpreter.js", ['sablono.interpreter'], ['sablono.util', 'cljs.core', 'clojure.string']);
+goog.addDependency("../sablono/core.js", ['sablono.core'], ['goog.dom', 'sablono.util', 'cljs.core', 'sablono.interpreter', 'clojure.string', 'clojure.walk']);
 goog.addDependency("../om/core.js", ['om.core'], ['cljs.core', 'om.dom', 'goog.ui.IdGenerator']);
-goog.addDependency("../ticker_client/core.js", ['ticker_client.core'], ['cljs.core', 'om.dom', 'chord.client', 'cljs.core.async', 'om.core']);
+goog.addDependency("../ticker_client/core.js", ['ticker_client.core'], ['cljs.core', 'om.dom', 'chord.client', 'cljs.core.async', 'sablono.core', 'om.core']);
